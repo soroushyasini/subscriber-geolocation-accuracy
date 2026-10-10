@@ -1,0 +1,21 @@
+# Runtime dependencies for the pipeline notebook.
+# Versions are intentionally unpinned: the original run did not record them.
+# After a successful run, create a lock file:  pip freeze > requirements.lock.txt
+
+pandas
+numpy
+geopandas      # reads Shapefile/DBF, spatial tests, CRS conversion (needs pyogrio or fiona)
+pyogrio        # fast GDAL I/O backend for geopandas
+shapely        # Point geometries
+pyproj         # UTM <-> lat/lon for QA maps
+scikit-learn   # DBSCAN
+folium         # interactive QA maps
+matplotlib     # report charts
+seaborn        # imported by the reporting cells
+openpyxl       # retained import in the full notebook
+simpledbf      # retained legacy Dbf5 import; DBFs are read with geopandas
+
+# Notebook tooling
+jupyterlab
+ipykernel
+nbstripout     # strips notebook outputs before commit (see docs/runbook.md)

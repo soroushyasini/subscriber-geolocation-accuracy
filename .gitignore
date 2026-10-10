@@ -1,0 +1,43 @@
+# --- Data: never commit real subscriber data -------------------------------
+workspace/
+data/
+output/
+*.accdb
+*.mdb
+
+# GIS / tabular files written or read by the notebook (run directory)
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.sbn
+*.sbx
+*.dbt
+*.qix
+*.gpkg
+*.geojson
+*.parquet
+*.xlsx
+*.xls
+*.csv
+*.json
+
+# Documentation images are allowed by default. Allow only synthetic test data:
+!tests/data/**
+
+# --- Python / Jupyter ------------------------------------------------------
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- OS / editor -------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
